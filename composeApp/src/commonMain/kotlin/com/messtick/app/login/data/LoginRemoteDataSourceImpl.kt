@@ -18,3 +18,11 @@ class LoginRemoteDataSourceImpl(
         }
     }
 }
+
+suspend fun refreshToken(httpClient: HttpClient, refreshToken: String): Result<LoginResponse> =
+    safeCall {
+        httpClient.get {
+            url("/api/login/refreshToken")
+            parameter("refreshTokens", refreshToken)
+        }
+    }

@@ -45,19 +45,3 @@ fun MesstickTypography() = Typography(
     labelMedium = baseline.labelMedium.copy(fontFamily = BodyFontFamily()),
     labelSmall = baseline.labelSmall.copy(fontFamily = BodyFontFamily()),
 )
-
-
-@Composable
-fun MesstickCupertinoTypography() = io.github.alexzhirkevich.cupertino.theme.Typography(
-    largeTitle = baseline.displayLarge.copy(fontFamily = DisplayFontFamily()),
-    title1 = baseline.displayMedium.copy(fontFamily = DisplayFontFamily()),
-    title2 = baseline.displaySmall.copy(fontFamily = DisplayFontFamily()),
-    title3 = baseline.headlineLarge.copy(fontFamily = DisplayFontFamily()),
-    headline = baseline.headlineMedium.copy(fontFamily = DisplayFontFamily(), fontWeight = FontWeight.SemiBold),
-    body = baseline.bodyLarge.copy(fontFamily = BodyFontFamily()),
-    callout = baseline.bodyMedium.copy(fontFamily = BodyFontFamily()),
-    subhead = baseline.bodySmall.copy(fontFamily = BodyFontFamily()),
-    footnote = baseline.labelLarge.copy(fontFamily = BodyFontFamily()),
-    caption1 = baseline.labelMedium.copy(fontFamily = BodyFontFamily()),
-    caption2 = baseline.labelSmall.copy(fontFamily = BodyFontFamily())
-)

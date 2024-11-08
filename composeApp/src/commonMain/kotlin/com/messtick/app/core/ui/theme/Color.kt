@@ -152,53 +152,5 @@ val darkSchemeMaterial = darkColorScheme(
     surfaceContainerHighest = surfaceContainerHighestDark,
 )
 
-val darkSchemeAdaptive = io.github.alexzhirkevich.cupertino.theme.darkColorScheme(
-    accent = primaryDark,
-    label = onPrimaryDark,
-    secondaryLabel = onSecondaryDark,
-    tertiaryLabel = onTertiaryDark,
-    quaternaryLabel = outlineDark,
-    systemFill = surfaceDark,
-    secondarySystemFill = surfaceVariantDark,
-    tertiarySystemFill = surfaceContainerLowDark,
-    quaternarySystemFill = surfaceContainerLowestDark,
-    placeholderText = outlineVariantDark,
-    separator = outlineDark,
-    opaqueSeparator = outlineVariantDark,
-    link = primaryDark,
-    systemGroupedBackground = backgroundDark,
-    secondarySystemGroupedBackground = surfaceContainerDark,
-    tertiarySystemGroupedBackground = surfaceContainerHighDark,
-    systemBackground = backgroundDark,
-    secondarySystemBackground = surfaceContainerDark,
-    tertiarySystemBackground = surfaceContainerHighestDark
-
-)
-
-val lightSchemeAdaptive = io.github.alexzhirkevich.cupertino.theme.lightColorScheme(
-    accent = primaryLight,
-    label = onPrimaryLight,
-    secondaryLabel = onSecondaryLight,
-    tertiaryLabel = onTertiaryLight,
-    quaternaryLabel = outlineLight,
-    systemFill = surfaceLight,
-    secondarySystemFill = surfaceVariantLight,
-    tertiarySystemFill = surfaceContainerLowLight,
-    quaternarySystemFill = surfaceContainerLowestLight,
-    placeholderText = outlineVariantLight,
-    separator = outlineLight,
-    opaqueSeparator = outlineVariantLight,
-    link = primaryLight,
-    systemGroupedBackground = backgroundLight,
-    secondarySystemGroupedBackground = surfaceContainerLight,
-    tertiarySystemGroupedBackground = surfaceContainerHighLight,
-    systemBackground = backgroundLight,
-    secondarySystemBackground = surfaceContainerLight,
-    tertiarySystemBackground = surfaceContainerHighestLight
-)
-
-
-
-
 
 

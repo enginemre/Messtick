@@ -20,11 +20,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.messtick.app.core.ui.util.ObserveAsEffect
-import io.github.alexzhirkevich.cupertino.CupertinoButton
-import io.github.alexzhirkevich.cupertino.ExperimentalCupertinoApi
-import io.github.alexzhirkevich.cupertino.adaptive.AdaptiveButton
-import io.github.alexzhirkevich.cupertino.adaptive.AdaptiveFilledIconButton
-import io.github.alexzhirkevich.cupertino.adaptive.ExperimentalAdaptiveApi
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable

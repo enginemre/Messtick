@@ -4,18 +4,18 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import kotlinx.serialization.Serializable
 
-@Serializable
-data object HomeNavigation
+const val homeRoute = "home"
 
 fun NavController.navigateHome(navOptions: NavOptions? = null) {
-    this.navigate(HomeNavigation, navOptions)
+    this.navigate(homeRoute, navOptions)
 }
 
 
 fun NavGraphBuilder.home() {
-    composable<HomeNavigation>() {
+    composable(
+        route = homeRoute
+    ) {
         HomeRoute()
     }
 }

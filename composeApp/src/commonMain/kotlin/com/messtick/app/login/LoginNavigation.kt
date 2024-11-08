@@ -7,14 +7,12 @@ import androidx.navigation.compose.composable
 import com.messtick.app.login.loginoauth.LoginOAuthRoute
 import kotlinx.serialization.Serializable
 
-@Serializable
-data object LoginNavigation
+const val loginRoute = "login"
 
-@Serializable
-data object LoginOAuthNavigation
+const val loginOAuthRoute = "loginOAuth"
 
 fun NavController.navigateLoginOAuth(navOptions: NavOptions? = null) {
-    this.navigate(LoginOAuthNavigation, navOptions)
+    this.navigate(loginOAuthRoute, navOptions)
 }
 
 fun NavController.navigateLogin(
@@ -24,7 +22,7 @@ fun NavController.navigateLogin(
         }
     }
 ) {
-    this.navigate(LoginNavigation, navOptions)
+    this.navigate(loginRoute, navOptions)
 }
 
 fun NavGraphBuilder.login(
@@ -32,12 +30,16 @@ fun NavGraphBuilder.login(
     navigateBack: () -> Unit,
     navigateLoginOAuth: () -> Unit
 ) {
-    composable<LoginNavigation>() {
+    composable(
+        route = loginRoute
+    ) {
         LoginRoute(
             navigateLoginOAuth = navigateLoginOAuth
         )
     }
-    composable<LoginOAuthNavigation>() {
+    composable(
+        route = loginOAuthRoute
+    ) {
         LoginOAuthRoute(
             navigateHome = navigateHome,
             navigateBack = navigateBack
