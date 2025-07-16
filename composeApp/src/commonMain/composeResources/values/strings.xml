@@ -1,0 +1,14 @@
+<resources>
+    <string name="chats">Chats</string>
+    <string name="send">Send</string>
+    <string name="message_send_error">Message did not sent</string>
+    <string name="message_placeholder">Type a message</string>
+    <string name="login_description">Start and create new account and use Messtick</string>
+    <string name="login">Login</string>
+    <string name="app_name">Messtick</string>
+    <string name="delete_chat">Delete Chat</string>
+    <string name="delete_cannot_be_done">Chat can not be deleted</string>
+    <string name="mute_chat">Mute chat</string>
+    <string name="mute_error_message">Notification preferences can not be edited</string>
+    <string name="mute_successful">Notification preferences updated</string>
+</resources>

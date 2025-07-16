@@ -4,7 +4,9 @@ import com.messtick.app.login.LoginViewModel
 import com.messtick.app.login.data.LoginRemoteDataSource
 import com.messtick.app.login.data.LoginRemoteDataSourceImpl
 import com.messtick.app.login.data.LoginUseCaseImpl
+import com.messtick.app.login.data.LogoutUseCaseImpl
 import com.messtick.app.login.domain.LoginUseCase
+import com.messtick.app.login.domain.LogoutUseCase
 import com.messtick.app.login.loginoauth.LoginOAuthViewModel
 import org.koin.core.module.dsl.bind
 import org.koin.core.module.dsl.singleOf
@@ -15,5 +17,6 @@ val loginModule = module {
     viewModelOf(::LoginViewModel)
     viewModelOf(::LoginOAuthViewModel)
     singleOf(::LoginUseCaseImpl) { bind<LoginUseCase>() }
+    singleOf(::LogoutUseCaseImpl) { bind<LogoutUseCase>() }
     singleOf(::LoginRemoteDataSourceImpl) { bind<LoginRemoteDataSource>() }
 }

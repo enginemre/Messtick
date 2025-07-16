@@ -1,0 +1,14 @@
+<resources>
+    <string name="chats">Sohbetler</string>
+    <string name="send">Gönder</string>
+    <string name="message_send_error">Mesaj gönderilemedi</string>
+    <string name="message_placeholder">Lütfen Mesajınızı giriniz</string>d
+    <string name="login_description">Şimdi giriş yaparak uygulamaya kullanmaya başlayın</string>d
+    <string name="login">Giriş Yap</string>
+    <string name="app_name">Messtick</string>
+    <string name="delete_chat">Sohbeti sil</string>
+    <string name="delete_cannot_be_done">Sohbet silinemedi</string>
+    <string name="mute_chat">Sohbeti sessize al</string>
+    <string name="mute_error_message">Sohbet bildirim tericihi güncellenemedi.</string>
+    <string name="mute_successful">Sohbet bildirim tercihi güncellendi</string>
+</resources>

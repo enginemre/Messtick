@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "669566298549",
+    "project_id": "messtick-ed05a",
+    "storage_bucket": "messtick-ed05a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669566298549:android:acd96063bafab1b73311fc",
+        "android_client_info": {
+          "package_name": "com.messtick.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDok2Ublsxff0GjvorDQ15OH382VCbAreI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

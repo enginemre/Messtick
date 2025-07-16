@@ -2,6 +2,7 @@ package com.messtick.app.login.loginoauth
 
 import androidx.lifecycle.viewModelScope
 import com.messtick.app.core.data.networking.Resource
+import com.messtick.app.core.domain.RegisterDeviceUseCase
 import com.messtick.app.core.ui.BaseViewModel
 import com.messtick.app.core.ui.ViewEffect
 import com.messtick.app.core.ui.ViewEvent
@@ -11,7 +12,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 class LoginOAuthViewModel(
-    private val loginUseCase: LoginUseCase
+    private val loginUseCase: LoginUseCase,
+    private val registerDeviceUseCase: RegisterDeviceUseCase,
 ) : BaseViewModel<LoginOAuthState, LoginOAuthEvent, LoginOAuthEffect>() {
     override fun createInitialState(): LoginOAuthState {
         return LoginOAuthState(
@@ -29,6 +31,7 @@ class LoginOAuthViewModel(
                             resource.exception.printStackTrace()
                             sendEffect(LoginOAuthEffect.NavigateBack)
                         }
+
                         is Resource.Success -> {
                             if (resource.data) {
                                 sendEffect(LoginOAuthEffect.NavigateToHome)

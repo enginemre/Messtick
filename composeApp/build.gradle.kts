@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.kotlinxSerialization)
+    alias(libs.plugins.googleServices)
+
 }
 
 kotlin {
@@ -23,6 +25,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
+            export(libs.kmpnotifier)
             baseName = "ComposeApp"
             isStatic = true
         }
@@ -37,6 +40,9 @@ kotlin {
             implementation(libs.koin.andorid)
 
             implementation(libs.ktor.client.android)
+
+            implementation( libs.androidx.work.runtime.ktx)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -63,16 +69,33 @@ kotlin {
             implementation(libs.datastore.core)
             implementation(libs.datastore.preferences.core)
 
+            implementation(libs.paging.compose.common)
+
+            implementation(libs.kotlinx.datetime)
+
+            implementation(libs.landscapist.coil3)
 
             implementation(libs.kotlinx.serialization.json)
 
             implementation(libs.napier)
 
+            implementation(libs.firebase.common)
+
+            implementation(libs.compottie)
+            implementation(libs.compottie.resources)
+
+            implementation(libs.richeditor.compose)
+
+            implementation(libs.kotlinx.collections.immutable)
+
             api(libs.compose.webview.multiplatform)
+
+            api(libs.kmpnotifier)
 
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }
@@ -97,6 +120,9 @@ android {
         getByName("release") {
             isMinifyEnabled = false
         }
+    }
+    buildFeatures {
+        compose = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

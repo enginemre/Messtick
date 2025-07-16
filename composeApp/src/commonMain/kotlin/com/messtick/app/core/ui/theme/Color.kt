@@ -3,7 +3,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
-val primaryLight = Color(0xFF535A92)
+val primaryLight = Color(0xFF2179ED)
 val onPrimaryLight = Color(0xFFFFFFFF)
 val primaryContainerLight = Color(0xFFDFE0FF)
 val onPrimaryContainerLight = Color(0xFF0D154B)
@@ -40,7 +40,7 @@ val surfaceContainerHighLight = Color(0xFFE9E7EF)
 val surfaceContainerHighestLight = Color(0xFFE4E1E9)
 
 
-val primaryDark = Color(0xFFBCC3FF)
+val primaryDark = Color(0xFF185AB8)
 val onPrimaryDark = Color(0xFF242C61)
 val primaryContainerDark = Color(0xFF3B4279)
 val onPrimaryContainerDark = Color(0xFFDFE0FF)

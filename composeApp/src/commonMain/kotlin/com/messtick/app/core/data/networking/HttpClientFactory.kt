@@ -64,17 +64,21 @@ class HttpClientFactory(
                             )
                         } else {
                             userDataStore.clearAll()
+                            userDataStore.sendSessionOutEvent()
                             null
                         }
                     }
                 }
             }
             defaultRequest {
-                url("https://api.dev.messtick.com")
+                url(NetworkConfig.BASE_URL)
                 contentType(ContentType.Application.Json)
             }
         }
     }
+}
 
-
+object NetworkConfig{
+    const val BASE_URL = "https://api.dev.messtick.com"
+    const val IMAGE_URL = "$BASE_URL/api/Chat/Picture"
 }

@@ -1,7 +1,7 @@
 package com.messtick.app.login.data.dto
 
-import com.messtick.app.core.data.networking.BaseResponse
-import com.messtick.app.core.data.networking.FriendlyMessage
+import com.messtick.app.core.data.networking.dto.BaseResponse
+import com.messtick.app.core.data.networking.dto.FriendlyMessage
 import kotlinx.serialization.Serializable
 
 @Serializable

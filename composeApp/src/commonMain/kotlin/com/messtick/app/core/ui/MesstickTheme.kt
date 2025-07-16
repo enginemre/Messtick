@@ -18,3 +18,14 @@ fun MesstickTheme(
         content = content
     )
 }
+
+@Composable
+fun MesstickWithoutDarkTheme(
+    content: @Composable () -> Unit
+) {
+    MaterialTheme(
+        colorScheme = lightSchemeMaterial,
+        typography = MesstickTypography(),
+        content = content
+    )
+}

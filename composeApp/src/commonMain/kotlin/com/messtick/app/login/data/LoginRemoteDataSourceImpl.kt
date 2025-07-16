@@ -5,7 +5,10 @@ import com.messtick.app.login.data.dto.LoginResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
+import io.ktor.client.request.post
 import io.ktor.client.request.url
+import io.ktor.http.ContentType
+import io.ktor.http.contentType
 
 
 class LoginRemoteDataSourceImpl(
@@ -21,8 +24,9 @@ class LoginRemoteDataSourceImpl(
 
 suspend fun refreshToken(httpClient: HttpClient, refreshToken: String): Result<LoginResponse> =
     safeCall {
-        httpClient.get {
+        httpClient.post() {
             url("/api/login/refreshToken")
+            contentType(ContentType.Application.Json)
             parameter("refreshTokens", refreshToken)
         }
     }
